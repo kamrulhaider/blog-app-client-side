@@ -1,7 +1,9 @@
 // import React from 'react';
+import { Link } from 'react-router-dom';
 import './TopBar.css'
 
 const TopBar = () => {
+    const user = false;
     return (
         <>
             <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
@@ -18,23 +20,48 @@ const TopBar = () => {
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav d-flex justify-content-center mb-2 mb-lg-0 w-100">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">HOME</a>
+                                <a class="nav-link" aria-current="page" href="#">
+                                    <Link to="/" className='link'>HOME</Link>
+                                </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">ABOUT</a>
+                                <a class="nav-link" href="#">
+                                    <Link to="/" className='link'>ABOUT</Link>
+                                </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">CONTACT</a>
+                                <a class="nav-link" href="#">
+                                    <Link to="/" className='link'>CONTACT</Link>
+                                </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">WRITE</a>
+                                <a class="nav-link" href="#">
+                                    <Link to="/write" className='link'>WRITE</Link>
+                                </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">LOGOUT</a>
+                                <a class="nav-link" href="#">
+                                    {user && "LOGOUT"}
+                                </a>
                             </li>
                         </ul>
                         <div className='d-flex justify-content-center ms-auto align-items-center'>
-                            <img className='topImg' src="https://www.seekpng.com/png/detail/966-9665493_my-profile-icon-blank-profile-image-circle.png" alt="" />
+                            {/* user Image */}
+                            {
+                                user ? (
+                                    <img className='topImg' src="https://www.seekpng.com/png/detail/966-9665493_my-profile-icon-blank-profile-image-circle.png" alt="" />
+                                ) :
+                                    (
+                                        <ul class="nav">
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#">
+                                                    <Link to="/login" className='link text-secondary'>LOGIN</Link>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    )
+                            }
+
                             <i className="topSearchIcon fas fa-search fs-4 text-secondary ms-3"></i>
                         </div>
                     </div>
