@@ -8,7 +8,7 @@ const Home = () => {
     return (
         <>
             <Header></Header>
-            <div className='home'>
+            <div className='home row'>
                 <Posts />
                 <SideBar />
             </div>
