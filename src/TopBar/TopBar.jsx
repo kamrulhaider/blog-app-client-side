@@ -4,7 +4,7 @@ import './TopBar.css'
 const TopBar = () => {
     return (
         <>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
                 <div class="container">
                     <a class="navbar-brand" href="#">
                         <i className="topIcon fab fa-facebook-square"></i>
