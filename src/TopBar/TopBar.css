@@ -1,0 +1,17 @@
+.topIcon {
+    font-size: 25px;
+    margin-right: 10px;
+    color: #444;
+    cursor: pointer;
+}
+
+.topImg{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.topSearchIcon{
+    cursor: pointer;
+}
