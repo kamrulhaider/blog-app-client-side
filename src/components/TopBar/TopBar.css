@@ -1,17 +1,24 @@
+.topbar-bg {
+  background-image: url(../../images/banner.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .topIcon {
-    font-size: 25px;
-    margin-right: 10px;
-    color: #444;
-    cursor: pointer;
+  font-size: 25px;
+  margin-right: 10px;
+  color: #444;
+  cursor: pointer;
 }
 
-.topImg{
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    object-fit: cover;
+.topImg {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
-.topSearchIcon{
-    cursor: pointer;
+.topSearchIcon {
+  cursor: pointer;
 }

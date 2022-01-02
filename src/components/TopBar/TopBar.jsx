@@ -6,41 +6,41 @@ const TopBar = () => {
     const user = false;
     return (
         <>
-            <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
-                <div class="container">
-                    <a class="navbar-brand" href="#">
+            <nav className="navbar sticky-top navbar-expand-lg navbar-light topbar-bg">
+                <div className="container">
+                    <a className="navbar-brand" href="#">
                         <i className="topIcon fab fa-facebook-square"></i>
                         <i className="topIcon fab fa-twitter-square"></i>
                         <i className="topIcon fab fa-pinterest-square"></i>
                         <i className="topIcon fab fa-instagram-square"></i>
                     </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span className="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav d-flex justify-content-center mb-2 mb-lg-0 w-100">
-                            <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="#">
+                    <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul className="navbar-nav d-flex justify-content-center mb-2 mb-lg-0 w-100">
+                            <li className="nav-item">
+                                <a className="nav-link" aria-current="page" href="#">
                                     <Link to="/" className='link'>HOME</Link>
                                 </a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
+                            <li className="nav-item">
+                                <a className="nav-link" href="#">
                                     <Link to="/" className='link'>ABOUT</Link>
                                 </a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
+                            <li className="nav-item">
+                                <a className="nav-link" href="#">
                                     <Link to="/" className='link'>CONTACT</Link>
                                 </a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
+                            <li className="nav-item">
+                                <a className="nav-link" href="#">
                                     <Link to="/write" className='link'>WRITE</Link>
                                 </a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
+                            <li className="nav-item">
+                                <a className="nav-link" href="#">
                                     {user && "LOGOUT"}
                                 </a>
                             </li>
@@ -52,9 +52,9 @@ const TopBar = () => {
                                     <img className='topImg' src="https://www.seekpng.com/png/detail/966-9665493_my-profile-icon-blank-profile-image-circle.png" alt="" />
                                 ) :
                                     (
-                                        <ul class="nav">
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="#">
+                                        <ul className="nav">
+                                            <li className="nav-item">
+                                                <a className="nav-link" href="#">
                                                     <Link to="/login" className='link text-secondary'>LOGIN</Link>
                                                 </a>
                                             </li>

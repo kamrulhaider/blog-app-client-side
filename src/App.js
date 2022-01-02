@@ -10,6 +10,7 @@ import {
   Routes,
   Route
 } from "react-router-dom";
+import Contact from "./pages/Contact/Contact";
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Route path="login" element={user ? <Home /> : <Login />} />
         <Route path="write" element={user ? <Write /> : <Register />} />
         <Route path="setting" element={user ? <Settings /> : <Register />} />
+        <Route path="contact" element={<Contact />} />
         <Route path="post/:postId" element={<Single />} />
       </Routes>
     </BrowserRouter>
