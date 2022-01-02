@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './TopBar.css'
 
 const TopBar = () => {
-    const user = false;
+    const user = true;
     return (
         <>
             <nav className="navbar sticky-top navbar-expand-lg navbar-light topbar-bg">
