@@ -15,7 +15,7 @@ export default function Register() {
     try {
        const res = await axios({
             method: 'post',
-            url: 'http://localhost:5000/api/auth/register',
+            url: 'https://safe-eyrie-10024.herokuapp.com/api/auth/register',
             data: {
                 username,
                 email,
@@ -65,7 +65,7 @@ export default function Register() {
           Login
         </Link>
       </button>
-      {error && <span style={{color:"red", marginTop:"10px"}}>{error}</span>}
+      {error && <span style={{color:"red", marginTop:"10px"}}>1</span>}
     </div>
   );
 }

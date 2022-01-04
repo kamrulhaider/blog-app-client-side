@@ -13,9 +13,13 @@ export default function Login() {
     e.preventDefault();
     dispatch({ type: "LOGIN_START" });
     try {
-      const res = await axios.post("http://localhost:5000/api/auth/login", {
-        username: userRef.current.value,
-        password: passwordRef.current.value,
+      const res = await axios({
+            method: 'post',
+            url: 'https://safe-eyrie-10024.herokuapp.com/api/auth/login',
+            data: {
+                username: userRef.current.value,
+                password: passwordRef.current.value,
+            }
       });
       dispatch({ type: "LOGIN_SUCCESS", payload: res.data });
       console.log(res);

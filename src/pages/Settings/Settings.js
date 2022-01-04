@@ -30,11 +30,19 @@ export default function Settings() {
       data.append("file", file);
       updatedUser.profilePic = filename;
       try {
-        await axios.post("/upload", data);
+        await axios({
+              method: 'post',
+              url: 'https://safe-eyrie-10024.herokuapp.com/api/upload',
+              data: data
+        });
       } catch (err) {}
     }
     try {
-      const res = await axios.put("/users/" + user._id, updatedUser);
+      const res = await axios({
+              method: 'put',
+              url: `https://safe-eyrie-10024.herokuapp.com/api/users/${user._id}`,
+              data: updatedUser
+        });
       setSuccess(true);
       dispatch({ type: "UPDATE_SUCCESS", payload: res.data });
     } catch (err) {

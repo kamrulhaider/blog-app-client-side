@@ -23,12 +23,21 @@ export default function Write() {
       data.append("file", file);
       newPost.photo = filename;
       try {
-        await axios.post("/upload", data);
+        await axios({
+              method: 'post',
+              url: 'https://safe-eyrie-10024.herokuapp.com/api/upload',
+              data: data
+        });
       } catch (err) {}
     }
     try {
-      const res = await axios.post("/posts", newPost);
-      window.location.replace("/post/" + res.data._id);
+      const res = await axios({
+              method: 'post',
+              url: `https://safe-eyrie-10024.herokuapp.com/api/posts`,
+              data: newPost
+      });
+      console.log(res)
+      window.location.replace(`https://safe-eyrie-10024.herokuapp.com/api/post/${res.data._id}`);
     } catch (err) {}
   };
   return (
