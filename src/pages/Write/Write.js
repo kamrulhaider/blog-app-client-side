@@ -37,7 +37,7 @@ export default function Write() {
               data: newPost
       });
       console.log(res)
-      window.location.replace(`https://safe-eyrie-10024.herokuapp.com/api/post/${res.data._id}`);
+      window.location.replace(`post/${res.data._id}`);
     } catch (err) {}
   };
   return (

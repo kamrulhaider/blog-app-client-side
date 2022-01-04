@@ -1,9 +1,11 @@
 import React from 'react';
 import { Form } from 'react-bootstrap';
+import Footer from '../../components/Footer/Footer';
 import './Contact.css';
 
 const Contact = () => {
     return (
+        <>
         <div className="d-flex justify-content-center bg-new vh-100">
             <div className="contact mt-5">
                 <h1 className="fw-bold text-center">Contact Me</h1>
@@ -24,6 +26,8 @@ const Contact = () => {
                 </Form>
             </div>
         </div>
+        <Footer></Footer>
+        </>
     );
 };
 

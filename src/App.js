@@ -12,6 +12,8 @@ import Register from "./pages/Register/Register";
 import { useContext } from "react";
 import { Context } from "./context/Context";
 import Settings from "./pages/Settings/Settings";
+import Contact from "./pages/Contact/Contact";
+import About from "./pages/About/About";
 
 function App() {
   const { user } = useContext(Context);
@@ -20,6 +22,8 @@ function App() {
         <TopBar></TopBar>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/about" element={<About />} />
           <Route path="register" element={user ? <Home /> : <Register />} />
           <Route path="login" element={user ? <Home /> : <Login />} />
           <Route path="write" element={user ? <Write /> : <Register />} />
