@@ -8,7 +8,10 @@ export default function Sidebar() {
 
   useEffect(() => {
     const getCats = async () => {
-      const res = await axios.get("/categories");
+      const res = await axios({
+              method: 'get',
+              url: "https://safe-eyrie-10024.herokuapp.com/api/categories"
+        });
       setCats(res.data);
     };
     getCats();
@@ -22,8 +25,10 @@ export default function Sidebar() {
           alt=""
         />
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate qui
-          necessitatibus nostrum illum reprehenderit.
+          Mission Statement - This describes the purpose of your business as it relates to the industry or market you serve.
+          Vision Statement.
+
+        
         </p>
       </div>
       <div className="sidebarItem">
